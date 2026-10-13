@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container"><h1>Mini Task Manager</h1><p>Bài kiểm tra thực hành HTML, CSS, Javascript</p></div>
+    </header>
+    <main class="container">
+        <!-- A: Bổ sung form gồm tên công việc, hạn hoàn thành, ưu tiên -->
+        <form id="taskForm" class="task-form">
+            <div class="input-group">
+                <input type="text" id="taskTitle" placeholder="Tên công việc (bắt buộc)">
+                <span id="errorMsg" class="error-text">Vui lòng nhập tên công việc!</span>
+            </div>
+            <input type="date" id="taskDueDate">
+            <select id="taskPriority">
+                <option value="Cao">Ưu tiên: Cao</option>
+                <option value="Trung bình" selected>Ưu tiên: Trung bình</option>
+                <option value="Thấp">Ưu tiên: Thấp</option>
+            </select>
+            <button type="submit" class="btn-primary">Thêm</button>
+        </form>
+
+
+        <!-- A: Bổ sung tìm kiếm, lọc trạng thái và vùng danh sách -->
+        <div class="task-controls">
+            <input type="text" id="searchInput" placeholder="Tìm kiếm theo tên...">
+            <select id="statusFilter">
+                <option value="Tất cả">Tất cả trạng thái</option>
+                <option value="pending">Chưa hoàn thành</option>
+                <option value="done">Đã hoàn thành</option>
+            </select>
+        </div>
+       
+        <ul id="taskList" class="task-list"></ul>
+    </main>
+    <footer class="site-footer">
+        <!-- Ghi rõ họ tên và mã sinh viên -->
+        Sinh viên: Phạm Diệu Thanh | MSSV: 224001745 | Lớp: Toán - Công nghệ thông tin
+    </footer>
+</body>
+</html>
+
+
+
